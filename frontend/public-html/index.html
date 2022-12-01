@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome: <input type="text" id="name" placeholder="Nome"><br>
+    Endereco: <input type="text" id="endereco" placeholder="endereco"><br>
+    Cep: <input type="text" id="cep" placeholder="cep"><br>
+    Data de Nascimento: <input type="date" id="dataNasc" placeholder="dataNasc"><br>
+    Telefone: <input type="text" id="telefone" placeholder="telefone"><br>
+    <button type="button" id="btn-salvar" onClick="salvar()">Salvar</button>
+    <button type="button" id="btn-atualizar" onClick="atualizar()" style="display:none">Atualizar</button>
+    <button type="button" onClick="limpar()">Novo</button>
+
+    <hr>
+    <table id="table-dados"
+    >
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereco</th>
+                <th>Cep</th>
+                <th>Data Nasc.</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../lib/controlador.js"></script>
+</body>
+</html>
