@@ -1,6 +1,5 @@
 <?php
 
-    //echo 'person: '.file_get_contents('php://input');
     header("Content-Type: application/json");
     include_once("../Classes/class-person.php");
     sleep(3);

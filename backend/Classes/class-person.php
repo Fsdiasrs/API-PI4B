@@ -122,6 +122,9 @@
                 return $this->name ." (".$this->endereco.", ".$this->cep.", ".$this->dataNasc.", ".$this->telefone.")";
         }
 
+        /**
+         * Função para criar novo registro
+         */
         public function create(){
                 $conteudoArquivo = file_get_contents("../data/person.json");
                 $pessoa = json_decode($conteudoArquivo, true);
@@ -137,17 +140,32 @@
                 fclose($arquivo);
         }
 
+
+        /**
+         * Função para listar todos os registros
+         *
+         * @return void
+         */
         public static function readAll(){
                 $conteudoArquivo = file_get_contents("../data/person.json");   
                 echo $conteudoArquivo;
         }
 
+        /**
+         * fnção para listar um registro
+         */
         public static function read($id){
                 $conteudoArquivo = file_get_contents("../data/person.json");   
                 $pessoas = json_decode($conteudoArquivo, true);
                 echo json_encode($pessoas[$id]);
         }
 
+        /**
+         * Função responsavel por alterar um registro
+         *
+         * @param [type] $id
+         * @return void
+         */
         public function update($id){
                 $conteudoArquivo = file_get_contents("../data/person.json");   
                 $pessoas = json_decode($conteudoArquivo, true);
@@ -164,6 +182,12 @@
                 fclose($arquivo);
         }
 
+        /**
+         * Função para deletar um registro
+         *
+         * @param [type] $id
+         * @return void
+         */
         public static function delete($id){
                 $conteudoArquivo = file_get_contents("../data/person.json");   
                 $pessoas = json_decode($conteudoArquivo, true);
