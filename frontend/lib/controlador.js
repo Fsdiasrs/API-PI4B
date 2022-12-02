@@ -35,8 +35,8 @@ function preencherTabela(){
             <td>${pessoas[i].cep}</td>
             <td>${pessoas[i].dataNasc}</td>
             <td>${pessoas[i].telefone}</td>
-            <td><button type="button" onclick="deletar(${i})">X</button></td>
-            <td><button type="button" onclick="selecionar(${i})">Editar</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="deletar(${i})">X</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="selecionar(${i})">Editar</button></td>
         </tr>`;
     }
 }
