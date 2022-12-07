@@ -1,8 +1,12 @@
 <?php
+    /**
+     * Arquivo que irá receber todas as requisições de usuários
+     */
 
     header("Content-Type: application/json");
     include_once("../Classes/class-person.php");
     sleep(3);
+
     switch($_SERVER['REQUEST_METHOD']){
         case 'POST': //create
                 $_POST = json_decode(file_get_contents('php://input'),true);
