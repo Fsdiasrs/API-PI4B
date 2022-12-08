@@ -5,11 +5,11 @@
 
     header("Content-Type: application/json");
     include_once("../Classes/class-person.php");
-    sleep(3);
+    //sleep(3);
 
     switch($_SERVER['REQUEST_METHOD']){
         case 'POST': //create
-                $_POST = json_decode(file_get_contents('php://input'),true);
+                $_POST = json_decode(file_get_contents('php://input'),true);// recebe um json decodifica em um array assossiativo
                 $person = new Person($_POST["name"], $_POST["endereco"], $_POST["cep"], $_POST["dataNasc"], $_POST["telefone"]);
                 $person->create();
                 $resultado["mensagem"] = "Salvar Usuario, dados: " . json_encode($_POST);
