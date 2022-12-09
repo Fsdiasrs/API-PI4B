@@ -152,7 +152,7 @@
         }
 
         /**
-         * fnção para listar um registro
+         * função para listar um registro
          */
         public static function read($id){
                 $conteudoArquivo = file_get_contents("../data/person.json");   
